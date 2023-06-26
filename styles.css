@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
+body {
+	background-color: aliceblue;
+	margin: 0;
+	max-width: 1000px;
+}
+* {
+	font-family: var(--tipografia);
+}
+:root {
+	--colorAzul: #0c62af;
+	--colorGris: #757575;
+	--colorBlanquito: #f2f2f2;
+	--colorAzulClaro: #b7e5f4;
+	--colorMarino: #00233f;
+	--tipografia: 'Plus Jakarta Sans';
+}
+.container {
+	margin: 2rem auto;
+	width: 800px;
+}
+.zona-input {
+	background-color: #00233f;
+	/* background-color: var(--colorBlanquito); */
+	border-radius: 2rem;
+	width: 100%;
+	display: flex;
+}
+.secc-amu {
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.secc-lista {
+	margin: 2rem;
+	flex-grow: 4;
+}
+.input-usuario {
+	color: var(--colorBlanquito);
+	font-weight: 600;
+	font-size: 1.25rem;
+	line-height: 1rem;
+}
+#input-depto,
+#input-mes,
+#input-ubicacion,
+#input-lista {
+	width: 100%;
+}
+#input-ubicacion,
+#input-lista {
+	padding: 0;
+}
+#input-lista {
+	resize: vertical;
+	height: 200px;
+}
+#generar-flyer {
+	width: 200px;
+	height: 50px;
+	color: var(--colorBlanquito);
+	background-color: #0c62af;
+	border: none;
+	font-size: 1.25rem;
+	border-radius: 12px;
+	transition: 200ms;
+}
+#generar-flyer:hover {
+	color: var(--colorAzul);
+	background-color: var(--colorBlanquito);
+	border: 2px solid var(--colorAzul);
+	cursor: pointer;
+}
+#generar-flyer:active {
+	transform: scale(0.9);
+}
+
+/* BOLETIN  */
+.area-boletin {
+	background: rgb(183, 229, 244);
+	background: linear-gradient(
+		0deg,
+		rgba(183, 229, 244, 1) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+
+	width: 100%;
+	margin: 25px auto;
+	position: relative;
+	z-index: 1;
+
+	border: 1px solid #757575;
+}
+.secc-preheader {
+	margin: 0.5rem 0px 0.5rem 2rem;
+}
+.titulo {
+	font-size: 3.5rem;
+	letter-spacing: -1pt;
+	font-weight: 700;
+	color: var(--colorAzul);
+	display: inline;
+	margin: 0px 2.5rem 0px 0px;
+}
+.seccion-logo {
+	display: inline-block;
+	transform: translate(0, 0.5rem);
+}
+.logo {
+	max-width: 170px;
+}
+.encabezado {
+	background-image: url(./media/fondo-header.png);
+	background-size: cover;
+	padding: 30px;
+	border-radius: 20px;
+	margin: 2rem;
+	margin-top: 0;
+	height: auto;
+	display: flex;
+	gap: 0;
+}
+.seccion-titulo {
+	height: 100%;
+	flex-grow: 1;
+	/* border: 1px solid white; */
+}
+.vacantesde {
+	font-size: 3.5rem;
+	letter-spacing: -0.5pt;
+	font-weight: 700;
+	line-height: 3.8rem;
+	color: var(--colorBlanquito);
+	text-shadow: -5px 5px rgba(0, 0, 0, 0.205);
+	margin: -1rem 0 0 0;
+}
+#depto {
+	color: var(--colorBlanquito);
+}
+.seccion-infoadicional {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 15px;
+}
+.seccion-mes {
+	border: 3px white solid;
+	border-radius: 20px;
+	height: fit-content;
+
+	padding: 0.7rem;
+	align-self: flex-end;
+}
+.mes {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 5pt;
+	color: var(--colorBlanquito);
+
+	line-height: 20pt;
+	margin: 0;
+}
+.seccion-ubicacion {
+	background-color: var(--colorBlanquito);
+	border-radius: 20px;
+	width: max-content;
+
+	padding: 0.7rem;
+	align-self: flex-end;
+}
+.ubicacion {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 5pt;
+	color: var(--colorAzul);
+
+	line-height: 20pt;
+	margin: 0;
+	text-align: right;
+}
+
+.listado {
+	/* border: #757575 1px solid; */
+	margin: 2rem 0 2rem 0;
+	padding: 0;
+}
+#lista {
+	font-size: 25pt;
+	line-height: 40pt;
+	font-weight: 500;
+	color: var(--colorMarino);
+	list-style: none;
+}
+#lista li:before {
+	content: '\2022';
+	color: #1eb3e1;
+	display: inline-block;
+	width: 35px;
+}
+.footer {
+	background-color: white;
+	padding: 25px;
+	border-radius: 20px;
+	border: 5px solid var(--colorAzul);
+	margin: 2rem;
+}
+.text-footer {
+	font-size: 21pt;
+	font-weight: 400;
+	color: #00233f;
+	margin: 0 0 1rem 0;
+}
+.text-footer2 {
+	font-size: 21pt;
+	font-weight: 400;
+	color: var(--colorMarino);
+	margin: 0;
+}
+#ast {
+	font-size: 32pt;
+	font-weight: 600;
+	color: var(--colorAzul);
+	line-height: 0;
+}
+#correo {
+	font-size: 25pt;
+	font-weight: 600;
+	color: #0c62af;
+	line-height: 0;
+	margin-bottom: 0 0 1rem 0;
+}
+.fondo-2-footer {
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	background: rgb(12, 98, 175);
+	background: linear-gradient(
+		0deg,
+		rgba(12, 98, 175, 1) 0%,
+		rgba(30, 179, 225, 1) 100%
+	);
+	margin: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+.aviso {
+	width: 1000px;
+	margin: auto;
+}
+h2 {
+	color: var(--colorAzul);
+}
+p {
+	color: var(--colorGris);
+}
+#img-ref {
+	max-width: 500px;
+}
