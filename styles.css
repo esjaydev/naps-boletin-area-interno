@@ -2,7 +2,6 @@
 body {
 	background-color: aliceblue;
 	margin: 0;
-	max-width: 1000px;
 }
 * {
 	font-family: var(--tipografia);
