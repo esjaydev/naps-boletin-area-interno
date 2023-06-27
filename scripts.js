@@ -19,6 +19,13 @@ inputUbicacion.addEventListener('input', function escribirUbicacion() {
     displayUbicacion.innerHTML = inputUbicacion.value;
 });
 
+const stringElemScr = ".area-boletin"
+
+function copiarString() {
+    navigator.clipboard.writeText(stringElemScr);
+    alert('Pega el texto copiado en la extensión "DOM Capture" y da click en "Save as image" 👉');
+}
+
 function convertirTexto() {
     var input = document.getElementById('input-lista');
     var lista = document.getElementById('lista');
