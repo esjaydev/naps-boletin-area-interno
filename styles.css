@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
 body {
-	background-color: aliceblue;
+	background-color: var(--colorMarino);
 	margin: 0;
 }
 * {
@@ -11,35 +11,45 @@ body {
 	--colorGris: #757575;
 	--colorBlanquito: #f2f2f2;
 	--colorAzulClaro: #b7e5f4;
+	--colorAzulCielo: #1eb3e1;
 	--colorMarino: #00233f;
+	--colorBlancoPuro: White;
 	--tipografia: 'Plus Jakarta Sans';
 }
 .container {
 	margin: 2rem auto;
 	width: 800px;
+	height: auto;
 }
 .zona-input {
-	background-color: #00233f;
-	/* background-color: var(--colorBlanquito); */
-	border-radius: 2rem;
+	background-color: white;
 	width: 100%;
 	display: flex;
+	gap: 2rem;
 }
 .secc-amu {
-	margin: 2rem;
+	margin: 0 0 2rem 2rem;
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1;
+	width: 75%;
 }
 .secc-lista {
-	margin: 2rem;
-	flex-grow: 4;
+	margin-right: 2rem;
+	width: 100%;
 }
 .input-usuario {
-	color: var(--colorBlanquito);
+	color: var(--colorMarino);
 	font-weight: 600;
 	font-size: 1.25rem;
 	line-height: 1rem;
+}
+.descargar-ext {
+	width: 100%;
+}
+.dom-capt {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--colorAzul);
 }
 #input-depto,
 #input-mes,
@@ -53,22 +63,22 @@ body {
 }
 #input-lista {
 	resize: vertical;
-	height: 200px;
+	height: 275px;
 }
 #generar-flyer {
-	width: 200px;
-	height: 50px;
+	width: auto;
+	height: auto;
 	color: var(--colorBlanquito);
 	background-color: #0c62af;
 	border: none;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	border-radius: 12px;
 	transition: 200ms;
+	padding: 0.7rem;
 }
 #generar-flyer:hover {
 	color: var(--colorAzul);
 	background-color: var(--colorBlanquito);
-	border: 2px solid var(--colorAzul);
 	cursor: pointer;
 }
 #generar-flyer:active {
@@ -94,14 +104,6 @@ body {
 .secc-preheader {
 	margin: 0.5rem 0px 0.5rem 2rem;
 }
-.titulo {
-	font-size: 3.5rem;
-	letter-spacing: -1pt;
-	font-weight: 700;
-	color: var(--colorAzul);
-	display: inline;
-	margin: 0px 2.5rem 0px 0px;
-}
 .seccion-logo {
 	display: inline-block;
 	transform: translate(0, 0.5rem);
@@ -112,76 +114,67 @@ body {
 .encabezado {
 	background-image: url(./media/fondo-header.png);
 	background-size: cover;
-	padding: 30px;
 	border-radius: 20px;
-	margin: 2rem;
-	margin-top: 0;
-	height: auto;
-	display: flex;
-	gap: 0;
+	box-shadow: -10px 10px 0 rgba(0, 0, 0, 0.18);
+	margin: 0 2rem;
+	padding: 1rem 0;
 }
 .seccion-titulo {
-	height: 100%;
-	flex-grow: 1;
-	/* border: 1px solid white; */
+	display: block;
+	margin-bottom: 1.5rem;
+}
+.titulo {
+	font-size: 3.5rem;
+	letter-spacing: -1pt;
+	font-weight: 700;
+	color: var(--colorAzul);
+	display: inline;
+	margin: 0 2.5rem 0 0;
+}
+p.vacantesde {
+	margin: 0;
 }
 .vacantesde {
-	font-size: 3.5rem;
+	text-align: center;
+	font-size: 3rem;
 	letter-spacing: -0.5pt;
-	font-weight: 700;
-	line-height: 3.8rem;
+	font-weight: 400;
+	line-height: 3.25rem;
 	color: var(--colorBlanquito);
-	text-shadow: -5px 5px rgba(0, 0, 0, 0.205);
-	margin: -1rem 0 0 0;
+	text-shadow: -3px 3px rgba(0, 0, 0, 0.205);
 }
 #depto {
-	color: var(--colorBlanquito);
+	font-size: 3.5rem;
+	font-weight: 700;
+	text-shadow: -5px 5px rgba(0, 0, 0, 0.205);
 }
 .seccion-infoadicional {
-	flex-grow: 1;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	gap: 15px;
+	justify-content: center;
+	gap: 1rem;
 }
-.seccion-mes {
-	border: 3px white solid;
+.seccion-mes,
+.seccion-ubicacion {
+	border: 3px var(--colorBlancoPuro) solid;
 	border-radius: 20px;
-	height: fit-content;
-
-	padding: 0.7rem;
-	align-self: flex-end;
+	padding: 0.5rem 1rem;
 }
-.mes {
-	font-size: 1.5rem;
-	font-weight: 600;
+.mes,
+.ubicacion {
+	font-size: 1.33rem;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 5pt;
-	color: var(--colorBlanquito);
-
-	line-height: 20pt;
+	color: var(--colorBlancoPuro);
+	text-align: left;
 	margin: 0;
 }
 .seccion-ubicacion {
-	background-color: var(--colorBlanquito);
-	border-radius: 20px;
-	width: max-content;
-
-	padding: 0.7rem;
-	align-self: flex-end;
+	background-color: var(--colorBlancoPuro);
 }
 .ubicacion {
-	font-size: 1.5rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 5pt;
 	color: var(--colorAzul);
-
-	line-height: 20pt;
-	margin: 0;
-	text-align: right;
 }
-
 .listado {
 	/* border: #757575 1px solid; */
 	margin: 2rem 0 2rem 0;
@@ -210,7 +203,7 @@ body {
 .text-footer {
 	font-size: 21pt;
 	font-weight: 400;
-	color: #00233f;
+	color: var(--colorGris);
 	margin: 0 0 1rem 0;
 }
 .text-footer2 {

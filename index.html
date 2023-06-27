@@ -23,9 +23,11 @@
                         <option value="Recursos Humanos">Recursos Humanos</option>
                         <option value="Calidad">Calidad</option>
                         <option value="Ingenieria">Ingeniería</option>
-                        <option value="Materiales">Materiales</option>
+                        <option value="Producción">Producción</option>
                         <option value="Aduanas">Aduanas</option>
+                        <option value="Materiales">Materiales</option>
                         <option value="Sistemas">Sistemas / IT</option>
+                        <option value="Administrativos">Administrativos</option>
                         <option value="Mantenimiento">Mantenimiento</option>
                         <option value="Ventas">Ventas</option>
                         <option value="EHS">EHS / Seguridad e Higiene</option>
@@ -53,14 +55,21 @@
                     <p class="input-usuario">Ubicación</p>
                     <input type="text" name="input-ubicacion" id="input-ubicacion">
                 </div>
+                <div class="descargar-ext">
+                    <p class="dom-capt"><a
+                            href="https://chrome.google.com/webstore/detail/dom-capture/ifldimnhajpgognpcoomiokinilgjgbl/related"
+                            target="_blank">⚠️Descarga
+                            la extensión DOM Capture</a></p>
+                    <button onclick="copiarString()" id="generar-flyer">
+                        Copiar String para DOM Capture
+                    </button>
+                </div>
             </div>
             <div class="secc-lista">
                 <p class="input-usuario">Lista de vacantes</p>
                 <textarea id="input-lista" placeholder="Escribe o pega aquí la lista de vacantes."
                     oninput="convertirTexto()"></textarea><br><br>
-                <button onclick="takeshot()" id="generar-flyer">
-                    Generar Flyer
-                </button>
+
             </div>
         </div>
         <!-------------------------------- AREA BOLETIN ---------------------------->
@@ -73,14 +82,16 @@
             </div>
             <div class="encabezado">
                 <div class="seccion-titulo">
-                    <p class="vacantesde">Vacantes de <br><span id="depto"></span></p>
+                    <p class="vacantesde">Vacantes en el área de <br>
+                        <span id="depto"></span>
+                    </p>
                 </div>
                 <div class="seccion-infoadicional">
-                    <div class="seccion-mes">
-                        <p class="mes"><span id="mes"></span></p>
-                    </div>
                     <div class="seccion-ubicacion">
                         <p class="ubicacion">📍<span id="ubicacion"></span></p>
+                    </div>
+                    <div class="seccion-mes">
+                        <p class="mes">📆<span id="mes"></span></p>
                     </div>
                 </div>
             </div>
